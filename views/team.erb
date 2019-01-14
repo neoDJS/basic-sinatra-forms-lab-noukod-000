@@ -8,7 +8,7 @@
    <% @params.each do |k, v|
       label = {"name"=> "Team Name", "coach": "Coach", "pg": "Point Guard", "sg": "Shooting Guard", "sf": "Small Forward", "pf": "Power Forward", "c": "Center"}
         if k=="name" %>
-          <p><h1><%= "#{label["name"]}: #{v}" %></h1></p>
+          <p><h1><%= "#{label[k]}: #{v}" %></h1></p>
          <% elsif v.nil? %>
           <p><h2><%= "#{label[k]}: #{v}" %></h2></p>
         <% end
